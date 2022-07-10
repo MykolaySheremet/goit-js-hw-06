@@ -9,16 +9,35 @@ const ingredients = [
 
 const listOfIngredients = document.querySelector('#ingredients');
 
-const createLi = (count => {
+// ВАРИАНТ 1
+// const createListOfLi = (count => {
 
-  for (let i = 0; i < count; i += 1){
-    const li = document.createElement('li');
+//   const listOfLi = [];
 
-    li.textContent = `${ingredients[i]}`;
-    li.classList.add('item');
-    listOfIngredients.append(li);
-  }
-})
+//   for (let i = 0; i < count; i += 1) {
+//     const li = document.createElement('li');
+//     li.textContent = `${ingredients[i]}`;
+//     li.classList.add('item');
+    
+//     listOfLi.push(li);
+//   }
+//   listOfIngredients.append(...listOfLi);
+// });
 
-createLi(ingredients.length);
+// createListOfLi(ingredients.length);
+
+
+
+
+// ВАРІАНТ 2
+const listOfLi = ingredients.map(option => {
+  const li = document.createElement('li');
+  li.textContent = option;
+  li.classList.add('item');
+  return li;
+});
+
+listOfIngredients.append(...listOfLi);
+
+
 

@@ -12,3 +12,19 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const galleryOfPictures = document.querySelector('.gallery');
+
+const picturesGal = images.map(element => {
+  ` <li>
+    <img class="images" url= '${element.url}' alt='${element.alt}'>
+    </li>`;
+
+})
+
+console.log(picturesGal);
+console.log("Ghbdtn");
+
+
+
+
