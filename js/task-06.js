@@ -2,7 +2,7 @@ const inputPlace = document.querySelector('input[data-length = "6"]');
 
 
 inputPlace.addEventListener('blur', event => {
-    if (event.currentTarget.value.length === Number(inputPlace.dataset.length)) {
+    if (event.currentTarget.value.trim().length === Number(inputPlace.dataset.length)) {
         inputPlace.classList.remove('invalid');
         inputPlace.classList.add("valid");
     }
