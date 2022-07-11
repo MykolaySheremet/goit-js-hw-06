@@ -13,18 +13,11 @@ const images = [
   },
 ];
 
+
 const galleryOfPictures = document.querySelector('.gallery');
 
-const picturesGal = images.map(element => {
-  ` <li>
-    <img class="images" url= '${element.url}' alt='${element.alt}'>
-    </li>`;
+const picturesGallery = images.map(element =>`<li><img class="images" url = "${element.url}" alt = "${element.alt}" min-width = 320px
+    </li>`).join("");
 
-})
-
-console.log(picturesGal);
-console.log("Ghbdtn");
-
-
-
+galleryOfPictures.insertAdjacentHTML("afterbegin", picturesGallery);
 
