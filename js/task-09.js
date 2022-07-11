@@ -1,3 +1,7 @@
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
+
 // Варіант 1.
 
 const refs = {
@@ -29,8 +33,6 @@ function changeBodyColor(event) {
 // });
 
 
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}
+
 
 
