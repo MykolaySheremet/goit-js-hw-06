@@ -10,14 +10,13 @@ const images = [
   {
     url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
     alt: 'Group of Horses Running',
-  },
+  }
 ];
 
 
 const galleryOfPictures = document.querySelector('.gallery');
 
-const picturesGallery = images.map(element =>`<li><img class="images" url = "${element.url}" alt = "${element.alt}" min-width = 320px
+const picturesGallery = images.map(element => `<li class="gallery__item"><img class="gallery_img"  src = "${element.url}" alt = "${element.alt}" width = 400>
     </li>`).join("");
 
 galleryOfPictures.insertAdjacentHTML("afterbegin", picturesGallery);
-
